@@ -15,7 +15,7 @@ jobs:
   parallel-job-macos:
     runs-on: macos-latest
     steps:
-      - name: View SW version
+      - name: View SW Version
         run: sw_vers
   dependent-job:
     runs-on: windows-latest
@@ -24,5 +24,5 @@ jobs:
       - name: echo a string
         run: write-Output "Windows String"
       - name: Error Step
-        run: doesnotexists
+        run: exit 1
           
